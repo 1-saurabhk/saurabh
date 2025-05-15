@@ -1,16 +1,16 @@
 body {
     font-family: Arial, sans-serif;
-    background-image: url('image.jpeg'); /* Add your image */
+    background-image: url; /* Add your image */
     background-size: cover; /* Ensures full coverage */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents repetition */
-    background-color: #f2f2f2; /* Fallback color */
+    background-color: #463737; /* Fallback color */
     text-align: center;
     padding: 20px;
 }
 
 /* Styling the header */
-h1 {
+h2{
     color: #002ca7;
     font-size: 2em;
     text-transform: uppercase;
@@ -19,7 +19,7 @@ h1 {
 /* Styling paragraphs */
 p {
     font-size: 1.2em;
-    color: #0080ff;
+    color: #7d0c87;
 }
 
 /* Links styling */
