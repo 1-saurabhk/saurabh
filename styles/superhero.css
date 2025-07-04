@@ -1,4 +1,8 @@
-/* Shared Style Template */
+
+a.link {
+    text-decoration: none;
+}
+
 p {
     color: transparent;
     width: 300px;
@@ -7,26 +11,38 @@ p {
     background-position: top;
     background-repeat: no-repeat;
     text-align: center;
-    font-size: 25px;
+    font-size: 1.2em;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     border-radius: 13px;
     transition: all 0.5s ease;
     margin: 20px auto;
 }
 
-/* Common hover effect */
 p:hover {
-    color: white;
+    color: rgb(255, 255, 255);
     height: 100px;
     padding-top: 65px;
     background-size: 180%;
     box-shadow: 0px 0px 30px black;
 }
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10;
+    padding: 10px;
+    
+}
 
-/* Individual Hero Styles */
+.container a {
+    flex: 1 1  300px;
+    max-width: 320px;
+}
+
+
 .p1 {
     background-image: url(images/image1.png);
-    cursor: url(images/cursor.png) 0 0, auto;
+    cursor: url(images/batman.png) 0 0, auto;
 }
 .p2 {
     background-image: url(images/ironman.jpg);

@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    padding: 30px;
+    cursor: url(../../styles/images/batman.png) 0 0, auto;
+   
+}
+.h1{
+    color: rgb(0, 0, 0);
+}
+
+.download{
+    color: transparent;
+    padding: 100px;
+    background-image: url(imageheros/batman2.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    margin: 20px auto;
+
+}
+
+.download:hover{
+    font-size: 200%;
+    color: white;
+    cursor: url(../../styles/images/batman.png) 0 0, auto;
+    
+}
+.info {
+    max-width: 800px;
+    margin: auto;
+    text-align: left;
+    color: #ffffff;
+    background-image: url(imageheros/batman2.jpg);
+    background-position: 100%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 30px;
+    font-size: 18px;
+    color: #3b7985;
+    text-decoration: none;
+}
+.back-link:hover {
+    text-decoration: underline;
+}
