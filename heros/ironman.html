@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iron Man | Superhero Vault</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Links to E:/heros/styleheros/ironman.css -->
+    <link rel="stylesheet" href="styleheros/ironman.css">
+    <script src="scriptsheros/ironman.js"></script>
+</head>
+<body class="ironman-theme">
+
+    <!-- Glassmorphism Navbar -->
+    <header class="navbar-header">
+        <nav class="navbar">
+            <!-- Navigating up one level (../) to root HTML files -->
+            <a href="../index.html" class="nav-logo">SAURABH'S <span>SUPERHEROES</span></a>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../marvel.html" class="nav-link active">Marvel</a>
+                <a href="../dc.html" class="nav-link">DC</a>
+                <a href="../about.html" class="nav-link">About</a>
+                <a href="../contact.html" class="nav-link">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Character Layout -->
+    <main class="page-wrapper">
+        <a href="../index.html" class="back-btn">&larr; Back to Heroes</a>
+
+        <section class="hero-profile">
+            <!-- Left: Character Card / Image -->
+            <div class="profile-image-container">
+                <div class="profile-image ironman-bg"></div>
+                <div class="arc-reactor-glow"></div>
+            </div>
+
+            <!-- Right: Character Details -->
+            <div class="profile-details">
+                <span class="universe-badge marvel">Marvel</span>
+                <h1 class="character-title">IRON MAN</h1>
+                <h3 class="character-alias">Tony Stark</h3>
+
+                <p class="character-bio">
+                    A genius, billionaire, playboy, and philanthropist. After being held captive in a cave, Tony Stark created a powered suit of armor to save his life and escape. He refined the tech to become the armored Avenger known as Iron Man.
+                </p>
+
+                <!-- Power Stats Grid -->
+                <div class="stats-container">
+                    <h3>Power Grid</h3>
+                    
+                    <div class="stat-bar">
+                        <div class="stat-info"><span>Intelligence</span><span>100%</span></div>
+                        <div class="progress-line"><span style="width: 100%;"></span></div>
+                    </div>
+
+                    <div class="stat-bar">
+                        <div class="stat-info"><span>Strength</span><span>85%</span></div>
+                        <div class="progress-line"><span style="width: 85%;"></span></div>
+                    </div>
+
+                    <div class="stat-bar">
+                        <div class="stat-info"><span>Speed (Flight)</span><span>90%</span></div>
+                        <div class="progress-line"><span style="width: 90%;"></span></div>
+                    </div>
+
+                    <div class="stat-bar">
+                        <div class="stat-info"><span>Durability</span><span>88%</span></div>
+                        <div class="progress-line"><span style="width: 88%;"></span></div>
+                    </div>
+                </div>
+
+                <!-- Quick Tech Overview -->
+                <div class="meta-grid">
+                    <div class="meta-item">
+                        <span class="meta-label">Primary Armor</span>
+                        <span class="meta-value">Mark LXXXV (85)</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Power Source</span>
+                        <span class="meta-value">New Element Arc Reactor</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">First Appearance</span>
+                        <span class="meta-value">Tales of Suspense #39</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="ironman.js"></script>
+</body>
+</html>
