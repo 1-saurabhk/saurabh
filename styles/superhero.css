@@ -1,74 +1,257 @@
-
-a.link {
-    text-decoration: none;
+/* ==========================================
+   Global Reset & Base Setup
+   ========================================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-p {
-    color: transparent;
-    width: 300px;
-    height: 50px;
-    background-size: 100%;
-    background-position: top;
-    background-repeat: no-repeat;
-    text-align: center;
-    font-size: 1.2em;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    border-radius: 13px;
-    transition: all 0.5s ease;
-    margin: 20px auto;
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0b0f19;
+    color: #ffffff;
+    min-height: 100vh;
+    line-height: 1.5;
 }
 
-p:hover {
-    color: rgb(255, 255, 255);
-    height: 100px;
-    padding-top: 65px;
-    background-size: 180%;
-    box-shadow: 0px 0px 30px black;
+/* ==========================================
+   Header & Glassmorphism Navbar
+   ========================================== */
+.navbar-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(11, 15, 25, 0.75);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
-.container {
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10;
-    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.nav-logo span {
+    color: #ff0000; /* Hero Red */
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+}
+
+.nav-link {
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    position: relative;
+    padding: 4px 0;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #ffffff;
+}
+
+/* Glowing underline indicator */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, #fdfbfb, #ff0000);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* ==========================================
+   Main Page Layout
+   ========================================== */
+.page-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 24px 60px;
+}
+
+.hero-intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero-intro h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    background: linear-gradient(180deg, #ffffff 0%, #94a3b8 100%);
     
+    /* Add the standard property right above or below the webkit prefix */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.hero-intro p {
+    color: #64748b;
+    font-size: 1rem;
+    margin-top: 6px;
 }
 
-.container a {
-    flex: 1 1  300px;
-    max-width: 320px;
+/* Responsive Grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
 }
 
+/* ==========================================
+   Superhero Card Components
+   ========================================== */
+.hero-card {
+    position: relative;
+    height: 320px;
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.4s ease;
+}
 
+/* Gradient Overlay for Readable Text */
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(11, 15, 25, 0) 40%, rgba(11, 15, 25, 0.95) 100%);
+    transition: opacity 0.3s ease;
+}
+
+.card-content {
+    position: relative;
+    z-index: 2;
+}
+
+.universe-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    margin-bottom: 8px;
+}
+
+.universe-badge.marvel {
+    background-color: rgba(229, 9, 20, 0.85);
+    color: #fff;
+}
+
+.universe-badge.dc {
+    background-color: rgba(0, 119, 255, 0.85);
+    color: #fff;
+}
+
+.hero-name {
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover States & Scaling */
+.hero-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7), 0 0 20px rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.hero-card:hover .hero-name {
+    transform: translateX(4px);
+}
+
+/* ==========================================
+   Character Backgrounds & Custom Cursors
+   ========================================== */
 .p1 {
-    background-image: url(images/image1.png);
-    cursor: url(images/batman.png) 0 0, auto;
+    background-image: url("images/image1.png");
+    cursor: url("images/batman.png") 16 16, pointer;
 }
 .p2 {
-    background-image: url(images/ironman.jpg);
-    cursor: url(images/ironman.png) 0 0, auto;
+    background-image: url("images/ironman.jpg");
+    cursor: url("images/ironman.png") 16 16, pointer;
 }
 .p3 {
-    background-image: url(images/spiderman.jpg);
-    cursor: url(images/spiderman.png) 0 0, auto;
+    background-image: url("images/spiderman.jpg");
+    cursor: url("images/spiderman.png") 16 16, pointer;
 }
 .p4 {
-    background-image: url(images/loki.jpg);
-    cursor: url(images/loki.png) 0 0, auto;
+    background-image: url("images/loki.jpg");
+    cursor: url("images/loki.png") 16 16, pointer;
 }
 .p5 {
-    background-image: url(images/strange.jpg);
-    cursor: url(images/strange.png) 0 0, auto;
+    background-image: url("images/strange.jpg");
+    cursor: url("images/strange.png") 16 16, pointer;
 }
 .p6 {
-    background-image: url(images/superman.jpg);
-    cursor: url(images/superman.png) 0 0, auto;
+    background-image: url("images/superman.jpg");
+    cursor: url("images/superman.png") 16 16, pointer;
 }
 .p7 {
-    background-image: url(images/captain.jpg);
-    cursor: url(images/captain.png) 0 0, auto;
+    background-image: url("images/captain.jpg");
+    cursor: url("images/captain.png") 16 16, pointer;
 }
 .p8 {
-    background-image: url(images/flash.jpg);
-    cursor: url(images/flash.png) 0 0, auto;
+    background-image: url("images/flash.jpg");
+    cursor: url("images/flash.png") 16 16, pointer;
+}
+
+/* ==========================================
+   Mobile Responsiveness
+   ========================================== */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero-intro h1 {
+        font-size: 2rem;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
 }

@@ -1,24 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles/superhero.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saurabh</title>
+    <title>Saurabh | Superhero Vault</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/superhero.css">
 </head>
 <body>
-<div class="container">
 
-<a href="heros/batman.html" class="link"><p class="p1">BATMAN</p></a>
-<a href="ironman.html" class="link"><p class="p2">IRONMAN</p></a>
-<a href="spiderman.html" class="link"><p class="p3">SPIDERMAN</p></a>
-<a href="loki.html" class="link"><p class="p4">LOKI</p></a>
-<a href="strange.html" class="link"><p class="p5">DR. STRANGE</p></a>
-<a href="superman.html" class="link"><p class="p6">SUPERMAN</p></a>
-<a href="captain.html" class="link"><p class="p7">CAPTAIN AMERICA</p></a>
-<a href="flash.html" class="link"><p class="p8">FLASH</p></a>
+    <!-- Glassmorphism Navbar -->
+    <header class="navbar-header">
+        <nav class="navbar">
+            <a href="index.html" class="nav-logo">SAURABH's <span>SUPERHEROS</span></a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="marvel.html" class="nav-link">Marvel</a>
+                <a href="dc.html" class="nav-link">DC</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+        </nav>
+    </header>
 
-</div>
+    <!-- Main Content -->
+    <main class="page-wrapper">
+        <header class="hero-intro">
+            <h1>Choose Your Hero</h1>
+            <p>Explore the legends of the Marvel & DC Universes</p>
+        </header>
+
+        <!-- Superhero Cards Grid -->
+        <section class="card-grid">
+            <a href="heros/batman.html" class="hero-card p1" aria-label="Batman">
+                <div class="card-overlay"></div>
+                <div class="card-content">
+                    <span class="universe-badge dc">DC</span>
+                    <h2 class="hero-name">BATMAN</h2>
+                </div>
+            </a>
+
+            <a href="ironman.html" class="hero-card p2" aria-label="Iron Man">
+                <div class="card-overlay"></div>
+                <div class="card-content">
+                    <span class="universe-badge marvel">Marvel</span>
+                    <h2 class="hero-name">IRON MAN</h2>
+                </div>
+            </a>
+
+            <a href="spiderman.html" class="hero-card p3" aria-label="Spider-Man">
+                <div class="card-overlay"></div>
+                <div class="card-content">
+                    <span class="universe-badge marvel">Marvel</span>
+                    <h2 class="hero-name">SPIDER-MAN</h2>
+                </div>
+            </a>
+
+            <a href="loki.html" class="hero-card p4" aria-label="Loki">
+                <div class="card-overlay"></div>
+                <div class="card-content">
+                    <span class="universe-badge marvel">Marvel</span>
+                    <h2 class="hero-name">LOKI</h2>
+                </div>
+            </a>
+
+            <a href="strange.html" class="hero-card p5" aria-label="Doctor Strange">
+                <div class="card-overlay"></div>
+                <div class="card-content">
+                    <span class="universe-badge marvel">Marvel</span>
+                    <h2 class="hero-name">DR. STRANGE</h2>
+                </div>
+            </a>
+
+            <a href="superman.html" class="hero-card p6" aria-label="Superman">
+                <div class="card-overlay"></div>
+                <div class="card-content">
+                    <span class="universe-badge dc">DC</span>
+                    <h2 class="hero-name">SUPERMAN</h2>
+                </div>
+            </a>
+
+            <a href="captain.html" class="hero-card p7" aria-label="Captain America">
+                <div class="card-overlay"></div>
+                <div class="card-content">
+                    <span class="universe-badge marvel">Marvel</span>
+                    <h2 class="hero-name">CAPTAIN AMERICA</h2>
+                </div>
+            </a>
+
+            <a href="flash.html" class="hero-card p8" aria-label="The Flash">
+                <div class="card-overlay"></div>
+                <div class="card-content">
+                    <span class="universe-badge dc">DC</span>
+                    <h2 class="hero-name">THE FLASH</h2>
+                </div>
+            </a>
+        </section>
+    </main>
 
 </body>
 </html>
